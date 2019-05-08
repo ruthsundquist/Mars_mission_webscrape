@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Scraper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p></p>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+        </div>
+        <div class="col-md-12 text-center">
+            <h2>{{index['nasa']['title']}}</h2>
+            <hr>
+            <p>{{index['nasa']['para']}}</p>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <img src="{{index['jpl']}}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                    <h2>Weather</h2>
+                    <p>{{index.weather}}</p>
+                </div>
+
+                {{index['facts']|safe}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{index['geol'][0]['url']}}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img src="{{index['geol'][1]['url']}}" alt="" class="img-fluid">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{index['geol'][2]['url']}}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img src="{{index['geol'][3]['url']}}" alt="" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
