@@ -141,16 +141,17 @@ def scrape():
                 "geol": dictlist}
 
     return(dictionary)
-print(scrape())
+
+# print(scrape())
 
 
-app= Flask(__name__)
-@app.route("/scrape")
-def scrapemongo():
-    return scrape
+# app= Flask(__name__)
+# @app.route("/scrape")
+# def scrapemongo():
+#     return scrape
 
-if __name__ == "__main__":  
-    app.run(debug=True)
+# if __name__ == "__main__":  
+#     app.run(debug=True)
 
 
 
